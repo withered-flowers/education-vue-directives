@@ -46,6 +46,7 @@
         <div class="w-full mt-16 md:mt-0 md:w-5/5">
           <div
             class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
+            <img class="mx-auto mb-8 rounded-full" src="https://placekitten.com/80/80" alt="Placeholder 80x80">
             <h3 class="mb-6 text-2xl font-medium text-center">Identity</h3>
             <input type="text" name="user-name"
               class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none"
@@ -93,7 +94,7 @@
 
             <select name="todo-priority"
               class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none">
-              <option selected disabled hidden>ToDo Priority</option>
+              <option selected disabled hidden></option>
               <option value="Low">Low</option>
               <option value="Critical">Critical</option>
               <option value="Highest">Highest</option>
@@ -225,6 +226,8 @@
     </div>
   </section>
 
+  <!-- Script section -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
