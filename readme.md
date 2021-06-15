@@ -40,6 +40,8 @@ Step-by-step:
     (Ingat pass by references !)
 16. Tambahkan Logic untuk finish Todo
 17. Edit image, gunakan src dan alt nya sebagai bind
+18. Tambahkan sebuah span di bawah identity dengan tulisan ini hanyalah tulisan merah,
+    perbedaan antara v-html dan v-text
 
 Referensi:
 - https://vuejs.org/v2/guide/
