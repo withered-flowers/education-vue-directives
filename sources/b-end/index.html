@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    /> -->
+    <!-- Use CDN for tailwind v3 -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>ToDo VueJS v3</title>
@@ -249,51 +246,53 @@
     <!-- Script section -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- TODO: 1. Masukkan VueJS ke index.html  -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
 
     <!-- TODO: 4. Buat vue variabel dan message hello vue -->
     <script language="javascript">
-      const app = new Vue({
+      Vue.createApp({
         el: "#app",
-        data: {
-          isLoggedIn: false,
-          username: "",
-          todo: {
-            name: "",
-            description: "",
-            priority: "",
-          },
-          todos: [
-            {
-              id: 1,
-              name: "Belajar Vue",
-              description: "Belajar Vue dari situs Vuenya langsung",
-              priority: "Critical",
+        data() {
+          return {
+            isLoggedIn: false,
+            username: "",
+            todo: {
+              name: "",
+              description: "",
+              priority: "",
             },
-            {
-              id: 2,
-              name: "Belajar Tailwind",
-              description: "Belajar Tailwind dari situs Vuenya langsung",
-              priority: "Low",
+            todos: [
+              {
+                id: 1,
+                name: "Belajar Vue",
+                description: "Belajar Vue dari situs Vuenya langsung",
+                priority: "Critical",
+              },
+              {
+                id: 2,
+                name: "Belajar Tailwind",
+                description: "Belajar Tailwind dari situs Vuenya langsung",
+                priority: "Low",
+              },
+              {
+                id: 3,
+                name: "Buat Aplikasi ToDo",
+                description:
+                  "Buat aplikasi ToDo sederhana dengan memanfaatkan Vue dan Tailwind",
+                priority: "Highest",
+              },
+              {
+                id: 4,
+                name: "Implementasi json-server",
+                description: "Tarik data dengan Vue + json-server",
+                priority: "Critical",
+              },
+            ],
+            imageSource: {
+              url: "https://placekitten.com/80/80",
+              alt: "Placeholder 80x80",
             },
-            {
-              id: 3,
-              name: "Buat Aplikasi ToDo",
-              description:
-                "Buat aplikasi ToDo sederhana dengan memanfaatkan Vue dan Tailwind",
-              priority: "Highest",
-            },
-            {
-              id: 4,
-              name: "Implementasi json-server",
-              description: "Tarik data dengan Vue + json-server",
-              priority: "Critical",
-            },
-          ],
-          imageSource: {
-            url: "https://placekitten.com/80/80",
-            alt: "Placeholder 80x80",
-          },
+          };
         },
         methods: {
           letsGoButtonHandler: function () {
@@ -320,7 +319,7 @@
             });
           },
         },
-      });
+      }).mount("#app");
     </script>
   </body>
 </html>
